@@ -34,7 +34,7 @@ class AnimeAdapter(private val animeList: List<Anime>, private val onItemClick: 
         holder.episodesTextView.text = "MAL ID: ${anime.mal_id}"
         holder.scoreTextView.text = "Score: ${anime.score ?: "N/A"}"
 
-        // Replace with your drawable resource ID
+
         val myPlaceholderImage = R.drawable.giconsign
 
         anime.images?.jpg?.image_url?.let { imageUrl ->

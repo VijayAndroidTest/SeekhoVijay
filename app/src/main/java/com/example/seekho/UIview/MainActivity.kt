@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.seekho.adapters.AnimeAdapter
 import com.example.seekho.viemmodels.AnimeViewModel
 import com.example.seekho.R
+import com.example.seekho.apiurls.NetworkMonitor
 import com.example.seekho.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        NetworkMonitor.register(this)
 
         binding.recycle.layoutManager = LinearLayoutManager(this)
         viewModel = ViewModelProvider(this)[AnimeViewModel::class.java]
